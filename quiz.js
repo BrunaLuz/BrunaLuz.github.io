@@ -166,16 +166,18 @@ function buildQuiz(){
         resultsContainer.innerHTML = "Congratulations! You got a perfect score of 4 out of 4 for your responses. You know Tara so well!";
         
         }
-
-        submitButton.onclick = function(){
-            showResults();
-         }
         
         }
 
-     // load quiz
+  // load quiz
 
      buildQuiz();  
+
+     submitButton.onclick = function(){
+
+        showResults();
+
+     }
      
     
 
