@@ -57,9 +57,8 @@ function buildQuiz(){
     
     // for each available answer to this question add an HTML radio button
     
-    for(letter in quizQuestions[i].answers)
+    for(letter in quizQuestions[i].answers){
     
-    {
     
     answers.push(
     
@@ -92,6 +91,7 @@ function buildQuiz(){
     // combine our output list into one string of HTML and put it on the page
     
     quizContainer.innerHTML = output.join('');
+
     
     }
 
@@ -110,6 +110,7 @@ function buildQuiz(){
         for(i=0; i<quizQuestions.length; i++){
         
         userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+        
         
         // if answer is correct add to the number of correct answers
         
@@ -169,16 +170,21 @@ function buildQuiz(){
         
         }
 
-  // load quiz
+     // load quiz
 
      buildQuiz();  
 
+
+     
      submitButton.onclick = function(){
 
         showResults();
 
      }
      
+    
+    
+
     
 
 
